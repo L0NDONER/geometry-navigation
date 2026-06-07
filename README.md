@@ -46,6 +46,16 @@ from geocoder import geocode_address
 
 The engine is transport-layer agnostic — wire it to any API, CLI, or service. The web layer lives separately in the host application.
 
+## Licence
+
+Copyright (C) 2026 L0NDONER
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU Affero General Public License](LICENSE) for more details.
+
+**Network use clause:** If you run a modified version of this engine as a networked service, you must make the complete source of your modified version available under the AGPL v3.
+
 ## Inception
 
 `2026-06-07T10:41:45Z`
