@@ -1,0 +1,542 @@
+{
+  "route_name": "Gressenhall → Weldon Lodge / Allotment Gardens",
+  "date": "2026-06-15",
+  "start": {
+    "lat": 52.708040,
+    "lon": 0.906617,
+    "postcode": "NR20 4DS",
+    "label": "Gressenhall"
+  },
+  "finish": {
+    "lat": 52.688135,
+    "lon": 0.944560,
+    "address": "2 Weldon Lodge",
+    "label": "Weldon Lodge / Allotment Gardens"
+  },
+  "conditions": {
+    "baseline_speed_kmh": 18,
+    "weather": "dry",
+    "traffic": "live"
+  },
+  "summary": {
+    "total_time_minutes": 99,
+    "distance_km": 7.0,
+    "stops": 50,
+    "depart_utc": "2026-06-15T08:00:00Z",
+    "arrive_utc": "2026-06-15T09:39:00Z"
+  },
+  "exit_throat": {
+    "label": "Sandy Lane / Dereham Road junction",
+    "route": "Sandy Lane descent → Dereham Road → Quebec Road → Windsor Park",
+    "van360_throat_depth": null,
+    "notes": "Open road at throat mouth, no U-turn constraint"
+  },
+  "stops": [
+    {
+      "id": 1,
+      "time": "08:01",
+      "lat": 52.708035,
+      "lon": 0.906550,
+      "address": "2 Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Gressenhall"
+    },
+    {
+      "id": 2,
+      "time": "08:03",
+      "lat": 52.707942,
+      "lon": 0.906535,
+      "address": "4 Road",
+      "traffic_multiplier": null,
+      "throat_depth": 1,
+      "section": "Gressenhall"
+    },
+    {
+      "id": 3,
+      "time": "08:13",
+      "lat": 52.688575,
+      "lon": 0.932514,
+      "address": "16 Colin Mclean Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Gressenhall approach — descending"
+    },
+    {
+      "id": 4,
+      "time": "08:15",
+      "lat": 52.688405,
+      "lon": 0.932538,
+      "address": "14 Colin Mclean Road",
+      "traffic_multiplier": null,
+      "throat_depth": 1,
+      "section": "Gressenhall approach — descending"
+    },
+    {
+      "id": 5,
+      "time": "08:16",
+      "lat": 52.688233,
+      "lon": 0.933043,
+      "address": "14 Heath Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane throat area"
+    },
+    {
+      "id": 6,
+      "time": "08:18",
+      "lat": 52.688242,
+      "lon": 0.933086,
+      "address": "12 Heath Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane throat area"
+    },
+    {
+      "id": 7,
+      "time": "08:20",
+      "lat": 52.688214,
+      "lon": 0.933144,
+      "address": "2 Heath Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane throat area"
+    },
+    {
+      "id": 8,
+      "time": "08:21",
+      "lat": 52.688167,
+      "lon": 0.933056,
+      "address": "6 Heath Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane throat area"
+    },
+    {
+      "id": 9,
+      "time": "08:23",
+      "lat": 52.688082,
+      "lon": 0.933142,
+      "address": "10 Heath Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane throat area"
+    },
+    {
+      "id": 10,
+      "time": "08:24",
+      "lat": 52.688066,
+      "lon": 0.933086,
+      "address": "4 Heath Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane throat area"
+    },
+    {
+      "id": 11,
+      "time": "08:26",
+      "lat": 52.688078,
+      "lon": 0.933250,
+      "address": "8 Heath Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane throat area"
+    },
+    {
+      "id": 12,
+      "time": "08:27",
+      "lat": 52.688475,
+      "lon": 0.932468,
+      "address": "12 Colin Mclean Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Gressenhall approach — descending"
+    },
+    {
+      "id": 13,
+      "time": "08:29",
+      "lat": 52.688397,
+      "lon": 0.932446,
+      "address": "10 Colin Mclean Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Gressenhall approach — descending"
+    },
+    {
+      "id": 14,
+      "time": "08:30",
+      "lat": 52.688471,
+      "lon": 0.932327,
+      "address": "8 Colin Mclean Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Gressenhall approach — descending"
+    },
+    {
+      "id": 15,
+      "time": "08:32",
+      "lat": 52.688605,
+      "lon": 0.932530,
+      "address": "6 Colin Mclean Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Gressenhall approach — descending"
+    },
+    {
+      "id": 16,
+      "time": "08:34",
+      "lat": 52.688468,
+      "lon": 0.932488,
+      "address": "4 Colin Mclean Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Gressenhall approach — descending"
+    },
+    {
+      "id": 17,
+      "time": "08:35",
+      "lat": 52.688575,
+      "lon": 0.932490,
+      "address": "2 Colin Mclean Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Gressenhall approach — descending"
+    },
+    {
+      "id": 18,
+      "time": "08:38",
+      "lat": 52.689458,
+      "lon": 0.928363,
+      "address": "4 Sandy Lane",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane / Humbletoft"
+    },
+    {
+      "id": 19,
+      "time": "08:39",
+      "lat": 52.689414,
+      "lon": 0.928326,
+      "address": "6 Sandy Lane",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane / Humbletoft"
+    },
+    {
+      "id": 20,
+      "time": "08:41",
+      "lat": 52.689425,
+      "lon": 0.928185,
+      "address": "2 Sandy Lane",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Sandy Lane / Humbletoft"
+    },
+    {
+      "id": 21,
+      "time": "08:46",
+      "lat": 52.685204,
+      "lon": 0.939458,
+      "address": "6 Quebec Road",
+      "traffic_multiplier": 1.25,
+      "throat_depth": null,
+      "section": "Quebec Road"
+    },
+    {
+      "id": 22,
+      "time": "08:47",
+      "lat": 52.685214,
+      "lon": 0.939480,
+      "address": "14 Quebec Road",
+      "traffic_multiplier": 1.25,
+      "throat_depth": null,
+      "section": "Quebec Road"
+    },
+    {
+      "id": 23,
+      "time": "08:49",
+      "lat": 52.685196,
+      "lon": 0.939594,
+      "address": "8 Quebec Road",
+      "traffic_multiplier": 1.25,
+      "throat_depth": null,
+      "section": "Quebec Road"
+    },
+    {
+      "id": 24,
+      "time": "08:50",
+      "lat": 52.685153,
+      "lon": 0.939650,
+      "address": "12 Quebec Road",
+      "traffic_multiplier": 1.25,
+      "throat_depth": null,
+      "section": "Quebec Road"
+    },
+    {
+      "id": 25,
+      "time": "08:52",
+      "lat": 52.685107,
+      "lon": 0.939547,
+      "address": "2 Quebec Road",
+      "traffic_multiplier": 1.25,
+      "throat_depth": null,
+      "section": "Quebec Road"
+    },
+    {
+      "id": 26,
+      "time": "08:54",
+      "lat": 52.684989,
+      "lon": 0.939562,
+      "address": "4 Quebec Road",
+      "traffic_multiplier": 1.25,
+      "throat_depth": null,
+      "section": "Quebec Road"
+    },
+    {
+      "id": 27,
+      "time": "08:55",
+      "lat": 52.685020,
+      "lon": 0.939409,
+      "address": "10 Quebec Road",
+      "traffic_multiplier": 1.25,
+      "throat_depth": null,
+      "section": "Quebec Road"
+    },
+    {
+      "id": 28,
+      "time": "08:58",
+      "lat": 52.681566,
+      "lon": 0.939772,
+      "address": "4 Quebec Street",
+      "traffic_multiplier": 1.20,
+      "throat_depth": null,
+      "section": "Quebec Street Dereham"
+    },
+    {
+      "id": 29,
+      "time": "09:00",
+      "lat": 52.681668,
+      "lon": 0.939682,
+      "address": "2 Quebec Street",
+      "traffic_multiplier": 1.20,
+      "throat_depth": 0,
+      "section": "Quebec Street Dereham — tight entry"
+    },
+    {
+      "id": 30,
+      "time": "09:01",
+      "lat": 52.681676,
+      "lon": 0.939808,
+      "address": "6 Quebec Street",
+      "traffic_multiplier": 1.20,
+      "throat_depth": 0,
+      "section": "Quebec Street Dereham — tight entry"
+    },
+    {
+      "id": 31,
+      "time": "09:03",
+      "lat": 52.681722,
+      "lon": 0.939673,
+      "address": "8 Quebec Street",
+      "traffic_multiplier": 1.20,
+      "throat_depth": 0,
+      "section": "Quebec Street Dereham — tight entry"
+    },
+    {
+      "id": 32,
+      "time": "09:04",
+      "lat": 52.681657,
+      "lon": 0.939731,
+      "address": "10 Quebec Street",
+      "traffic_multiplier": 1.20,
+      "throat_depth": 0,
+      "section": "Quebec Street Dereham — tight entry"
+    },
+    {
+      "id": 33,
+      "time": "09:10",
+      "lat": 52.692529,
+      "lon": 0.937040,
+      "address": "6 Quebec Hall",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Quebec Hall Bungalows"
+    },
+    {
+      "id": 34,
+      "time": "09:11",
+      "lat": 52.692590,
+      "lon": 0.937188,
+      "address": "4 Quebec Hall",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Quebec Hall Bungalows"
+    },
+    {
+      "id": 35,
+      "time": "09:13",
+      "lat": 52.692665,
+      "lon": 0.937070,
+      "address": "2 Quebec Hall",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Quebec Hall Bungalows"
+    },
+    {
+      "id": 36,
+      "time": "09:15",
+      "lat": 52.693300,
+      "lon": 0.939769,
+      "address": "12 Windsor Park",
+      "traffic_multiplier": 1.10,
+      "throat_depth": null,
+      "section": "Windsor Park"
+    },
+    {
+      "id": 37,
+      "time": "09:17",
+      "lat": 52.693351,
+      "lon": 0.939763,
+      "address": "8 Windsor Park",
+      "traffic_multiplier": 1.10,
+      "throat_depth": null,
+      "section": "Windsor Park"
+    },
+    {
+      "id": 38,
+      "time": "09:18",
+      "lat": 52.693370,
+      "lon": 0.939896,
+      "address": "2 Windsor Park",
+      "traffic_multiplier": 1.10,
+      "throat_depth": null,
+      "section": "Windsor Park"
+    },
+    {
+      "id": 39,
+      "time": "09:20",
+      "lat": 52.693274,
+      "lon": 0.939870,
+      "address": "10 Windsor Park",
+      "traffic_multiplier": 1.10,
+      "throat_depth": null,
+      "section": "Windsor Park"
+    },
+    {
+      "id": 40,
+      "time": "09:21",
+      "lat": 52.693285,
+      "lon": 0.940002,
+      "address": "4 Windsor Park",
+      "traffic_multiplier": 1.10,
+      "throat_depth": null,
+      "section": "Windsor Park"
+    },
+    {
+      "id": 41,
+      "time": "09:23",
+      "lat": 52.693495,
+      "lon": 0.939833,
+      "address": "6 Windsor Park",
+      "traffic_multiplier": 1.10,
+      "throat_depth": null,
+      "section": "Windsor Park"
+    },
+    {
+      "id": 42,
+      "time": "09:25",
+      "lat": 52.691179,
+      "lon": 0.942251,
+      "address": "8 Highfield Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Highfield Road"
+    },
+    {
+      "id": 43,
+      "time": "09:27",
+      "lat": 52.691173,
+      "lon": 0.942359,
+      "address": "4 Highfield Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Highfield Road"
+    },
+    {
+      "id": 44,
+      "time": "09:28",
+      "lat": 52.691230,
+      "lon": 0.942462,
+      "address": "6 Highfield Road",
+      "traffic_multiplier": null,
+      "throat_depth": 0,
+      "section": "Highfield Road — tight entry"
+    },
+    {
+      "id": 45,
+      "time": "09:30",
+      "lat": 52.691277,
+      "lon": 0.942352,
+      "address": "10 Highfield Road",
+      "traffic_multiplier": null,
+      "throat_depth": 0,
+      "section": "Highfield Road — tight entry"
+    },
+    {
+      "id": 46,
+      "time": "09:31",
+      "lat": 52.691125,
+      "lon": 0.942380,
+      "address": "2 Highfield Road",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Highfield Road"
+    },
+    {
+      "id": 47,
+      "time": "09:34",
+      "lat": 52.688203,
+      "lon": 0.944732,
+      "address": "8 Weldon Lodge",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Weldon Lodge / Allotment Gardens"
+    },
+    {
+      "id": 48,
+      "time": "09:36",
+      "lat": 52.688267,
+      "lon": 0.944670,
+      "address": "4 Weldon Lodge",
+      "traffic_multiplier": null,
+      "throat_depth": 4,
+      "section": "Weldon Lodge / Allotment Gardens — narrow lane"
+    },
+    {
+      "id": 49,
+      "time": "09:37",
+      "lat": 52.688110,
+      "lon": 0.944689,
+      "address": "6 Weldon Lodge",
+      "traffic_multiplier": null,
+      "throat_depth": 4,
+      "section": "Weldon Lodge / Allotment Gardens — narrow lane"
+    },
+    {
+      "id": 50,
+      "time": "09:39",
+      "lat": 52.688135,
+      "lon": 0.944560,
+      "address": "2 Weldon Lodge",
+      "traffic_multiplier": null,
+      "throat_depth": null,
+      "section": "Weldon Lodge / Allotment Gardens"
+    }
+  ],
+  "notes": {
+    "throat_analysis": "Exit throat at Sandy Lane / Dereham Road is open (no Van360 depth constraint). Quebec Street stops 29–32 show TD=0 (zero U-turn depth — tight entry). Weldon Lodge approach (stops 48–49) shows TD=4 (4-step probe depth indicates narrow allotment lane).",
+    "traffic_impact": "Quebec Road area (stops 21–27): ×1.25 penalty due to congestion. Quebec Street: ×1.20. Windsor Park: ×1.10. Other areas: live traffic at baseline.",
+    "route_logic": "A-B-C sequencing visible: linear descending pass through Colin McLean / Heath Road (Sandy Lane throat cluster), then east to Quebec Road, north through Quebec Street (tight entry), then Quebec Hall and Windsor Park bubble, ending in constrained Weldon Lodge / Allotment Gardens lane.",
+    "convergence": "Run 3 geometry lock — throat depths stabilized, stop clustering consistent with prior runs."
+  }
+}
