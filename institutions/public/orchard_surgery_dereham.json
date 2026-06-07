@@ -1,0 +1,109 @@
+{
+  "_licence": "CC0 1.0 Universal — public domain dedication. No rights reserved.",
+  "_source": "OSM way/246650012 (ODbL) + NaPTAN + postcodes.io. Coords from OSM unless noted.",
+  "_surveyed": "2026-06-07",
+  "_osm_way": 246650012,
+
+  "name": "Orchard Surgery",
+  "short_name": "Orchard Surgery",
+  "nhs_trust": null,
+  "type": "gp_surgery",
+  "subtype": null,
+  "country": "GB",
+  "region": "East of England",
+  "icb": "NHS Norfolk and Waveney Integrated Care Board",
+
+  "address": {
+    "street": "Commercial Road",
+    "locality": "Toftwood",
+    "town": "Dereham",
+    "county": "Norfolk",
+    "postcode_delivery": "NR19 1AE"
+  },
+
+  "centroid": { "lat": 52.67974, "lon": 0.94354 },
+
+  "bounding_box": {
+    "south": 52.67957, "north": 52.67991,
+    "west":  0.94322,  "east":  0.94386
+  },
+
+  "road_access": {
+    "primary_road": "Commercial Road",
+    "notes": "On Commercial Road (B1147), Toftwood. Traffic signals at Commercial Road / Norwich Street junction 130m north (52.680313, 0.943950). Lift gate on rear boundary — private access only."
+  },
+
+  "entrances": [
+    {
+      "id": "main_entrance",
+      "label": "Main entrance (Commercial Road)",
+      "type": "vehicle_and_pedestrian",
+      "lat": 52.67974, "lon": 0.94354,
+      "coord_source": "OSM way centroid — entrance node not separately tagged",
+      "notes": "Faces Commercial Road. Dereham Pharmacy co-located on site (east end of building, 52.679651, 0.943750)."
+    }
+  ],
+
+  "on_site": [
+    {
+      "name": "Dereham Pharmacy",
+      "formerly": "Lloyds Pharmacy",
+      "type": "pharmacy",
+      "lat": 52.67965, "lon": 0.94375,
+      "osm_node": 2562562065,
+      "coord_source": "OSM node"
+    }
+  ],
+
+  "car_parks": [
+    {
+      "id": "cp_motorcycle",
+      "label": "Motorcycle parking",
+      "lat": 52.67941, "lon": 0.94321,
+      "osm_node": 4240853063,
+      "coord_source": "OSM node",
+      "access": "public",
+      "capacity": 6,
+      "fee": false,
+      "maxstay": "180 minutes",
+      "surface": "asphalt",
+      "covered": false,
+      "operator": "Dencora"
+    }
+  ],
+
+  "bus_stops": [
+    {
+      "naptan": "2900D1570",
+      "label": "London Road, opp",
+      "lat": 52.67824, "lon": 0.94140,
+      "bearing": "NW",
+      "street": "London Road",
+      "landmark": "opp No. 29",
+      "notes": "Closest stop to surgery, ~250m south-west on London Road."
+    },
+    {
+      "naptan": "2900D151",
+      "label": "Market Place, N-bound",
+      "lat": 52.68120, "lon": 0.94079,
+      "bearing": "N",
+      "street": "Market Place",
+      "notes": "~300m north, Dereham town centre."
+    }
+  ],
+
+  "delivery": {
+    "preferred_vehicle_entry": "main_entrance",
+    "loading_bay": null,
+    "throat_on_approach": null,
+    "internal_road_notes": "Small surgery building. No internal road. Park on Commercial Road or use Dencora motorcycle/car park area.",
+    "turning_available": false,
+    "notes": "Rear boundary has private lift gate — not for delivery use. Traffic signals at Norwich Street junction 130m north."
+  },
+
+  "contacts": {
+    "phone": "+44 1362 693029",
+    "fax": "+44 1362 698347",
+    "website": "https://www.orchardsurgerydereham.co.uk"
+  }
+}
