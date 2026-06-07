@@ -27,14 +27,35 @@ One file per postcode unit. Delivery metadata: pattern, entry/exit preference, l
 Groups of postcodes with visit history, preferred entry/exit, observed neighbours.
 
 ### Complex (`complexes/*.json`)
-Campus-level schema for large sites (hospitals, factories). Keys:
-- `campus` — throats, spine, clusters, farm spurs, terminals
-- `floors` — per-floor node/edge graphs with z-levels
+Campus-level schema for large sites (hospitals, factories). Top-level keys:
+
+- `repo` — source repository URL
+- `campus` — throats, preferred throat, spine, clusters, farm spurs, terminals
+- `floors` — per-floor node/edge graphs with z-levels (`LB1` sub-basement through `L2` second floor)
 - `vertical_links` — lift and stair cores connecting floors
+
+**Cluster fields:** `name`, `aliases`, `door_id`, `side`, `floor`, `priority`, `constraints` (e.g. `max_height_m`), `note`
+
+**Floor node types:** `cluster_entry`, `junction`, `room`, `ward`, `lift`, `stair`
+
+**Vertical link types:** `lift`, `stairs` — each core lists its stops in z-order
+
+#### Example: NNUH (`complexes/NNUH.json`)
+
+| Floor | z | Cluster entries |
+|---|---|---|
+| LB1 Sub-Basement | -1 | Radiology_Main (MRI, CT) |
+| L0 Ground | 0 | ED_Main · Bay_04 · Loading_Bay_A · Loading_Bay_B · Service_Tunnel_A |
+| L1 First | +1 | — (Ward_1A, Ward_1B, Outpatients) |
+| L2 Second | +2 | MHU_Entry (Mental Health Unit) |
+
+Vertical cores: Lift A (LB1→L2), Lift B (L0→L2), Stair B (LB1→L2)
 
 ## Pathfinding
 
 BFS over the floor mesh. Nodes: rooms, junctions, lift landings, cluster entries. Edges: walkable connections per floor. Vertical movement via `vertical_links` (lift/stairs). Blocked nodes (closed bays, maintenance) are excluded from traversal at query time — the engine automatically falls back to the next viable entry point.
+
+Entry fallback priority: primary dock → secondary dock → side entrance → service tunnel → last resort (A&E, with restrictions noted in schema).
 
 ## Usage
 
