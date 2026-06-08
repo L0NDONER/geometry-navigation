@@ -1,0 +1,202 @@
+{
+  "repo": "https://github.com/L0NDONER/geometry-navigation",
+  "campus": {
+    "name": "NNUH",
+    "full_name": "Norfolk and Norwich University Hospital",
+    "postcode": "NR4 7UY",
+    "coords": [52.6197, 1.2204],
+    "throats": ["A47/Colney Lane Entrance", "Main Service Gate B"],
+    "preferred_throat": "A47/Colney Lane Entrance",
+    "spine": "Internal Service Ring Road",
+    "clusters": [
+      {
+        "name": "Pathology/Labs",
+        "aliases": ["pathology", "labs", "pathology lab", "pathology/labs"],
+        "door_id": "Bay_04",
+        "side": "left",
+        "floor": "L0"
+      },
+      {
+        "name": "Main Logistics Dock",
+        "aliases": ["logistics", "loading", "loading bay", "main logistics"],
+        "door_id": "Loading_Bay_A",
+        "priority": "high",
+        "floor": "L0",
+        "constraints": {
+          "security_clearance": "standard"
+        }
+      },
+      {
+        "name": "Mental Health Unit",
+        "aliases": ["mental health", "mhu", "mental health unit"],
+        "walk_required": true,
+        "security_check": true,
+        "floor": "L2"
+      },
+      {
+        "name": "Loading_Bay_B",
+        "aliases": ["bay_b", "service_gate_b", "loading bay b", "loading b"],
+        "door_id": "Loading_Bay_B",
+        "priority": "medium",
+        "floor": "L0",
+        "constraints": {
+          "max_height_m": 3.2,
+          "security_clearance": "standard"
+        },
+        "note": "Secondary service access via Main Service Gate B throat — longer spine run than Bay A"
+      },
+      {
+        "name": "Main Atrium",
+        "aliases": ["atrium", "main atrium", "main entrance", "reception"],
+        "door_id": "Atrium_L0",
+        "floor": "L0"
+      },
+      {
+        "name": "A&E / Emergency",
+        "aliases": ["a&e", "ae", "a & e", "accident", "emergency", "emergency department", "a+e"],
+        "door_id": "ED_Main",
+        "side": "right",
+        "floor": "L0",
+        "note": "Drop kerb access only — do not block ambulance bay"
+      }
+    ],
+    "farm_spurs": [
+      {
+        "name": "Radiology Sub-Basement",
+        "aliases": ["radiology", "x-ray", "mri"],
+        "commit_depth": 5,
+        "is_underground": true,
+        "floor": "LB1"
+      },
+      {
+        "name": "Service Tunnel Alpha",
+        "aliases": ["service tunnel"],
+        "walk_of_shame": true,
+        "floor": "L0",
+        "note": "Low clearance 2.4m"
+      }
+    ],
+    "terminals": ["Waste Management Yard", "Incinerator"]
+  },
+
+  "floors": [
+    {
+      "id": "LB1",
+      "name": "Sub-Basement",
+      "z": -1,
+      "nodes": [
+        { "id": "Radiology_Main",    "type": "cluster_entry", "cluster": "Radiology Sub-Basement" },
+        { "id": "MRI_Suite",         "type": "room" },
+        { "id": "CT_Suite",          "type": "room" },
+        { "id": "Lift_Core_A_LB1",  "type": "lift",  "core": "A" },
+        { "id": "Stair_B_LB1",      "type": "stair", "core": "Stair_B" }
+      ],
+      "edges": [
+        ["Lift_Core_A_LB1",  "Radiology_Main"],
+        ["Stair_B_LB1",      "Radiology_Main"],
+        ["Radiology_Main",   "MRI_Suite"],
+        ["Radiology_Main",   "CT_Suite"]
+      ]
+    },
+    {
+      "id": "L0",
+      "name": "Ground",
+      "z": 0,
+      "nodes": [
+        { "id": "ED_Main",           "type": "cluster_entry", "cluster": "A&E / Emergency" },
+        { "id": "ED_Triage",         "type": "room" },
+        { "id": "ED_Resus",          "type": "room" },
+        { "id": "Bay_04",            "type": "cluster_entry", "cluster": "Pathology/Labs" },
+        { "id": "Loading_Bay_A",     "type": "cluster_entry", "cluster": "Main Logistics Dock" },
+        { "id": "Loading_Bay_B",     "type": "cluster_entry", "cluster": "Loading_Bay_B", "max_height_m": 3.2 },
+        { "id": "Service_Tunnel_A",  "type": "cluster_entry", "cluster": "Service Tunnel Alpha" },
+        { "id": "Main_Corridor_L0",  "type": "junction" },
+        { "id": "Atrium_L0",         "type": "junction" },
+        { "id": "Lift_Core_A_L0",   "type": "lift",  "core": "A" },
+        { "id": "Lift_Core_B_L0",   "type": "lift",  "core": "B" },
+        { "id": "Stair_B_L0",       "type": "stair", "core": "Stair_B" }
+      ],
+      "edges": [
+        ["ED_Main",          "ED_Triage"],
+        ["ED_Triage",        "ED_Resus"],
+        ["ED_Main",          "Main_Corridor_L0"],
+        ["Main_Corridor_L0", "Atrium_L0"],
+        ["Main_Corridor_L0", "Bay_04"],
+        ["Main_Corridor_L0", "Loading_Bay_A"],
+        ["Main_Corridor_L0", "Loading_Bay_B"],
+        ["Main_Corridor_L0", "Service_Tunnel_A"],
+        ["Atrium_L0",        "Lift_Core_A_L0"],
+        ["Atrium_L0",        "Lift_Core_B_L0"],
+        ["Atrium_L0",        "Stair_B_L0"]
+      ]
+    },
+    {
+      "id": "L1",
+      "name": "First",
+      "z": 1,
+      "nodes": [
+        { "id": "Ward_1A",           "type": "ward" },
+        { "id": "Ward_1B",           "type": "ward" },
+        { "id": "Outpatients_1",     "type": "room" },
+        { "id": "Main_Corridor_L1",  "type": "junction" },
+        { "id": "Atrium_L1",         "type": "junction" },
+        { "id": "Lift_Core_A_L1",   "type": "lift",  "core": "A" },
+        { "id": "Lift_Core_B_L1",   "type": "lift",  "core": "B" },
+        { "id": "Stair_B_L1",       "type": "stair", "core": "Stair_B" }
+      ],
+      "edges": [
+        ["Lift_Core_A_L1",   "Atrium_L1"],
+        ["Lift_Core_B_L1",   "Atrium_L1"],
+        ["Stair_B_L1",       "Atrium_L1"],
+        ["Atrium_L1",        "Main_Corridor_L1"],
+        ["Main_Corridor_L1", "Ward_1A"],
+        ["Ward_1A",          "Ward_1B"],
+        ["Main_Corridor_L1", "Outpatients_1"]
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "Second",
+      "z": 2,
+      "nodes": [
+        { "id": "MHU_Entry",         "type": "cluster_entry", "cluster": "Mental Health Unit" },
+        { "id": "MHU_Reception",     "type": "room" },
+        { "id": "MHU_Ward_A",        "type": "ward" },
+        { "id": "MHU_Ward_B",        "type": "ward" },
+        { "id": "Main_Corridor_L2",  "type": "junction" },
+        { "id": "Atrium_L2",         "type": "junction" },
+        { "id": "Lift_Core_A_L2",   "type": "lift",  "core": "A" },
+        { "id": "Lift_Core_B_L2",   "type": "lift",  "core": "B" },
+        { "id": "Stair_B_L2",       "type": "stair", "core": "Stair_B" }
+      ],
+      "edges": [
+        ["Lift_Core_A_L2",   "Atrium_L2"],
+        ["Lift_Core_B_L2",   "Atrium_L2"],
+        ["Stair_B_L2",       "Atrium_L2"],
+        ["Atrium_L2",        "Main_Corridor_L2"],
+        ["Main_Corridor_L2", "MHU_Entry"],
+        ["MHU_Entry",        "MHU_Reception"],
+        ["MHU_Reception",    "MHU_Ward_A"],
+        ["MHU_Ward_A",       "MHU_Ward_B"]
+      ]
+    }
+  ],
+
+  "vertical_links": [
+    {
+      "core": "A",
+      "type": "lift",
+      "stops": ["Lift_Core_A_LB1", "Lift_Core_A_L0", "Lift_Core_A_L1", "Lift_Core_A_L2"]
+    },
+    {
+      "core": "B",
+      "type": "lift",
+      "stops": ["Lift_Core_B_L0", "Lift_Core_B_L1", "Lift_Core_B_L2"]
+    },
+    {
+      "core": "Stair_B",
+      "type": "stairs",
+      "stops": ["Stair_B_LB1", "Stair_B_L0", "Stair_B_L1", "Stair_B_L2"]
+    }
+  ]
+}
