@@ -6,7 +6,7 @@ Pipeline:
   stops → make_bubbles → classify_throats → sequence_bubble → full_route
 
 A bubble is a tight geographic cluster of stops (one residential close or
-pocket). Throat classification runs Van360.throat_probe at each stop entry
+pocket). Throat classification runs LocalKinematicModel.throat_probe at each stop entry
 heading. Sequencing puts throat stops last-in/first-out so the van never
 has to U-turn inside one.
 """
@@ -18,7 +18,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
 
-from courier_gps import Van360, Vec2, _latlon_to_xy
+from courier_gps import LocalKinematicModel, Vec2, _latlon_to_xy
 from geocoder import geocode_address
 
 BUBBLE_RADIUS_M = 120.0   # stops within this radius form one bubble
@@ -154,7 +154,7 @@ def classify_throats(bubble: Bubble, world, van_heading: float) -> None:
     and stop.uturn_side in place.
     """
     for stop in bubble.stops:
-        van = Van360(
+        van = LocalKinematicModel(
             position=stop.position,
             heading=van_heading,
             radius=VAN_SENSE_RADIUS,

@@ -534,7 +534,7 @@
     }
   ],
   "notes": {
-    "throat_analysis": "Exit throat at Sandy Lane / Dereham Road is open (no Van360 depth constraint). Quebec Street stops 29–32 show TD=0 (zero U-turn depth — tight entry). Weldon Lodge approach (stops 48–49) shows TD=4 (4-step probe depth indicates narrow allotment lane).",
+    "throat_analysis": "Exit throat at Sandy Lane / Dereham Road is open (no LocalKinematicModel depth constraint). Quebec Street stops 29–32 show TD=0 (zero U-turn depth — tight entry). Weldon Lodge approach (stops 48–49) shows TD=4 (4-step probe depth indicates narrow allotment lane).",
     "traffic_impact": "Quebec Road area (stops 21–27): ×1.25 penalty due to congestion. Quebec Street: ×1.20. Windsor Park: ×1.10. Other areas: live traffic at baseline.",
     "route_logic": "A-B-C sequencing visible: linear descending pass through Colin McLean / Heath Road (Sandy Lane throat cluster), then east to Quebec Road, north through Quebec Street (tight entry), then Quebec Hall and Windsor Park bubble, ending in constrained Weldon Lodge / Allotment Gardens lane.",
     "convergence": "Run 3 geometry lock — throat depths stabilized, stop clustering consistent with prior runs."

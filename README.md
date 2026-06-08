@@ -15,7 +15,7 @@ Two routing modes in one system:
 | File | Role |
 |---|---|
 | `route_optimiser.py` | Bubble clustering, throat classification, A-B-C street sequencing |
-| `courier_gps.py` | Van360 geometry, GPS tick processing, dwell detection |
+| `courier_gps.py` | LocalKinematicModel geometry, GPS tick processing, dwell detection |
 | `geocoder.py` | Address → Vec2 projection against postcode centroid |
 
 ## Data schemas
@@ -62,7 +62,7 @@ Entry fallback priority: primary dock → secondary dock → side entrance → s
 See [`examples/Gressenhall_to_Weldon_Lodge_2026-06-15.json`](./examples/Gressenhall_to_Weldon_Lodge_2026-06-15.json) for a real 50-stop delivery route with:
 
 - **Live traffic penalties** (×1.10 to ×1.25 multipliers)
-- **Van360 throat detection** (TD column shows probe depth; 0 = no U-turn room, 4 = narrow lane)
+- **LocalKinematicModel throat detection** (TD column shows probe depth; 0 = no U-turn room, 4 = narrow lane)
 - **Actual stop sequence and timestamps** (Gressenhall 08:00 → Weldon Lodge 09:39, 99 minutes, 7.0 km)
 - **A-B-C street sequencing** visible in route logic (linear descent → detour → continuation)
 

@@ -353,7 +353,7 @@ def speed_variance(ticks: list[GPSTick]) -> float | None:
 
 
 # ---------------------------------------------------------------------------
-# Van360 — local-frame obstacle sensing, U-turn and throat geometry
+# LocalKinematicModel — local-frame obstacle sensing, U-turn and throat geometry
 # ---------------------------------------------------------------------------
 
 @dataclass
@@ -398,7 +398,8 @@ def _intersects_arc(point: Vec2, size: float, arc: Arc) -> bool:
 
 
 @dataclass
-class Van360:
+# van360 lookup: local-frame turning feasibility bubble
+class LocalKinematicModel:
     position: Vec2
     heading: float          # radians
     radius: float = 4.0     # sensing bubble (metres)
@@ -440,7 +441,7 @@ class Van360:
         A non-None result means the entry is a throat at depth
         (result * step_size) metres in.
         """
-        probe = Van360(
+        probe = LocalKinematicModel(
             position=Vec2(self.position.x, self.position.y),
             heading=self.heading,
             radius=self.radius,
@@ -457,12 +458,12 @@ class Van360:
 
 
 def van_from_tick(tick: GPSTick, ref_lat: float, ref_lon: float,
-                  radius: float = 4.0, turn_radius: float = 6.0) -> Van360:
-    """Project a GPSTick into local metres and return a Van360.
+                  radius: float = 4.0, turn_radius: float = 6.0) -> LocalKinematicModel:
+    """Project a GPSTick into local metres and return a LocalKinematicModel.
 
     ref_lat/ref_lon is the anchor/mouth point of the close — used as the
-    local coordinate origin so Van360 geometry stays in metres.
+    local coordinate origin so LocalKinematicModel geometry stays in metres.
     """
     pos = _latlon_to_xy(ref_lat, ref_lon, tick.lat, tick.lon)
-    return Van360(position=pos, heading=math.radians(tick.heading_deg),
+    return LocalKinematicModel(position=pos, heading=math.radians(tick.heading_deg),
                   radius=radius, turn_radius=turn_radius)
